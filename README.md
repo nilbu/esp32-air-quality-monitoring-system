@@ -30,6 +30,8 @@ IoT air quality monitoring system based on ESP32, PMS5003 and BME280.
 
 Sensors → ESP32 → WiFi → Google Apps Script → Google Sheets
 
+![Architecture](images/system_architecture.png)
+
 ---
 
 ## Data Processing
