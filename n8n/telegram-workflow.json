@@ -5,7 +5,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "1Kx86VhAUPrRExLrs7t1lvp5T9c3bUPOqWesKTf4e2VU",
+          "value": "YOUR_GOOGLE_SHEET_ID",
           "mode": "list",
           "cachedResultName": "ESP32_Weater_Station",
           "cachedResultUrl": ""
@@ -31,7 +31,7 @@
       "name": "Get row(s) in sheet",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "7NRbvayMfo1V7cXF",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": ""
         }
       }
@@ -48,7 +48,7 @@
           "values": [
             {
               "role": "system",
-              "content": "=Kontekst rozmowy:\n{{$json.context}}\nJesteś asystentem stacji pogodowej Tomka Bielawskiego .Masz dostęp do danych pomiarowych ze stacji pogodowej bulina:\n\nTemperatura: {{$json.Temperature}} °C\nWilgotność: {{$json.Humidity}} %\nCiśnienie: {{$json.Pressure}} hPa\nPM1: {{$json[\"PM 1\"]}} µg/m³\nPM2.5: {{$json[\"PM 2.5\"]}} µg/m³\nPM10: {{$json[\"PM 10\"]}} µg/m³\n\nMasz również pełne dane z OpenWeather API w formacie JSON.\nJeśli użytkownik pyta o szczegóły (np. wysokość, wschód słońca, wiatr, lokalizację, współrzędne), użyj tych danych.\n\nDane OpenWeather (pełne):\n\nLokalizacja: {{$json.openweather.name}}\nWspółrzędne: {{$json.openweather.coord.lat}}, {{$json.openweather.coord.lon}}\n\nTemperatura: {{$json.openweather.main.temp}} °C\nOdczuwalna: {{$json.openweather.main.feels_like}} °C\nCiśnienie: {{$json.openweather.main.pressure}} hPa\nWilgotność: {{$json.openweather.main.humidity}} %\n\nWiatr: {{$json.openweather.wind.speed}} m/s\nKierunek wiatru: {{$json.openweather.wind.deg}}°\nPorywy: {{$json.openweather.wind.gust}} m/s\n\nZachmurzenie: {{$json.openweather.clouds.all}} %\nWidoczność: {{$json.openweather.visibility}} m\n\nOpis: {{$json.openweather.weather[0].description}}\n\nWschód słońca (timestamp): {{$json.openweather.sys.sunrise}}\nZachód słońca (timestamp): {{$json.openweather.sys.sunset}}\n\nZasady:\n\n- jeśli użytkownik pyta o jeden parametr, podaj tylko jego wartość\n- jeśli pyta o dane stacji, podaj wszystkie\n- jeśli dane są dostępne w OpenWeather, używaj ich zamiast zgadywać\n- nie wymyślaj danych — korzystaj tylko z podanych wartości\n- jeśli pytanie nie dotyczy stacji, odpowiedz normalnie\n "
+              "content": "=Kontekst rozmowy:\n{{$json.context}}\nJesteś asystentem stacji pogodowej. Masz dostęp do danych pomiarowych ze stacji pogodowej:\n\nTemperatura: {{$json.Temperature}} °C\nWilgotność: {{$json.Humidity}} %\nCiśnienie: {{$json.Pressure}} hPa\nPM1: {{$json[\"PM 1\"]}} µg/m³\nPM2.5: {{$json[\"PM 2.5\"]}} µg/m³\nPM10: {{$json[\"PM 10\"]}} µg/m³\n\nMasz również pełne dane z OpenWeather API w formacie JSON.\nJeśli użytkownik pyta o szczegóły (np. wysokość, wschód słońca, wiatr, lokalizację, współrzędne), użyj tych danych.\n\nDane OpenWeather (pełne):\n\nLokalizacja: {{$json.openweather.name}}\nWspółrzędne: {{$json.openweather.coord.lat}}, {{$json.openweather.coord.lon}}\n\nTemperatura: {{$json.openweather.main.temp}} °C\nOdczuwalna: {{$json.openweather.main.feels_like}} °C\nCiśnienie: {{$json.openweather.main.pressure}} hPa\nWilgotność: {{$json.openweather.main.humidity}} %\n\nWiatr: {{$json.openweather.wind.speed}} m/s\nKierunek wiatru: {{$json.openweather.wind.deg}}°\nPorywy: {{$json.openweather.wind.gust}} m/s\n\nZachmurzenie: {{$json.openweather.clouds.all}} %\nWidoczność: {{$json.openweather.visibility}} m\n\nOpis: {{$json.openweather.weather[0].description}}\n\nWschód słońca (timestamp): {{$json.openweather.sys.sunrise}}\nZachód słońca (timestamp): {{$json.openweather.sys.sunset}}\n\nZasady:\n\n- jeśli użytkownik pyta o jeden parametr, podaj tylko jego wartość\n- jeśli pyta o dane stacji, podaj wszystkie\n- jeśli dane są dostępne w OpenWeather, używaj ich zamiast zgadywać\n- nie wymyślaj danych — korzystaj tylko z podanych wartości\n- jeśli pytanie nie dotyczy stacji, odpowiedz normalnie\n "
             },
             {
               "content": "={{ $json.text }}"
@@ -68,7 +68,7 @@
       "name": "Weather AI 2.0",
       "credentials": {
         "openAiApi": {
-          "id": "hdNslrq7ctMZwTrQ",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "OpenAi account"
         }
       }
@@ -89,10 +89,10 @@
       ],
       "id": "090e7562-ccde-48ec-a79e-fbbbf0351286",
       "name": "Send a text message",
-      "webhookId": "cfed465f-a331-48fa-88a2-a2905c1b75a4",
+      "webhookId": "REDACTED",
       "credentials": {
         "telegramApi": {
-          "id": "ZDZOZpzRKf4y2ISS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Telegram account"
         }
       }
@@ -112,10 +112,10 @@
       ],
       "id": "0d750379-62cf-43fa-b05f-21ce840ec03a",
       "name": "Telegram Trigger",
-      "webhookId": "a6d0a9ea-e7d2-4dfc-950b-cc2504df2ae3",
+      "webhookId": "REDACTED",
       "credentials": {
         "telegramApi": {
-          "id": "ZDZOZpzRKf4y2ISS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Telegram account"
         }
       }
@@ -124,7 +124,7 @@
       "parameters": {
         "documentId": {
           "__rl": true,
-          "value": "1Kx86VhAUPrRExLrs7t1lvp5T9c3bUPOqWesKTf4e2VU",
+          "value": "YOUR_GOOGLE_SHEET_ID",
           "mode": "list",
           "cachedResultName": "ESP32_Weater_Station",
           "cachedResultUrl": ""
@@ -150,7 +150,7 @@
       "name": "Get row(s) in sheet1",
       "credentials": {
         "googleSheetsOAuth2Api": {
-          "id": "7NRbvayMfo1V7cXF",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Google Sheets account 2"
         }
       }
@@ -169,10 +169,10 @@
       ],
       "id": "080856f7-b472-4af2-955d-d0e26e3c161a",
       "name": "Get a file",
-      "webhookId": "a7481426-5483-4527-813c-22a2ec25adcd",
+      "webhookId": "REDACTED",
       "credentials": {
         "telegramApi": {
-          "id": "ZDZOZpzRKf4y2ISS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Telegram account"
         }
       }
@@ -195,14 +195,14 @@
       "name": "Transcribe a recording",
       "credentials": {
         "openAiApi": {
-          "id": "hdNslrq7ctMZwTrQ",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "OpenAi account"
         }
       }
     },
     {
       "parameters": {
-        "jsCode": "const rows = $input.all();\n\nlet context = rows\n  .map(r => `${r.json.role}: ${r.json.content}`)\n  .join(\"\\n\");\n\nreturn [{\n  json: {\n    ...$node[\"marge data\"].json, // 👈 zmieniamy dane pogodowe \n    context\n  }\n}];"
+        "jsCode": "const rows = $input.all();\n\nlet context = rows\n  .map(r => `${r.json.role}: ${r.json.content}`)\n  .join(\"\\n\");\n\nreturn [{\n  json: {\n    ...$node[\"marge data\"].json,\n    context\n  }\n}];"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -336,7 +336,7 @@
       "name": "Insert rows in a table",
       "credentials": {
         "postgres": {
-          "id": "bV9bmw7tIiVbHZOS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Postgres account Weather"
         }
       }
@@ -362,14 +362,14 @@
       "name": "Embeding 3-small",
       "credentials": {
         "openAiApi": {
-          "id": "hdNslrq7ctMZwTrQ",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "OpenAi account"
         }
       }
     },
     {
       "parameters": {
-        "cityName": "kraków,pl",
+        "cityName": "YOUR_CITY",
         "language": "pl"
       },
       "type": "n8n-nodes-base.openWeatherMap",
@@ -382,7 +382,7 @@
       "name": "OpenWeatherMap",
       "credentials": {
         "openWeatherMapApi": {
-          "id": "s8gCZz68Dn6CQfnk",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "OpenWeatherMap account"
         }
       }
@@ -493,7 +493,7 @@
       "name": "SELECT embeding",
       "credentials": {
         "postgres": {
-          "id": "bV9bmw7tIiVbHZOS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Postgres account Weather"
         }
       }
@@ -516,7 +516,7 @@
       "name": "INSERT messages",
       "credentials": {
         "postgres": {
-          "id": "bV9bmw7tIiVbHZOS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Postgres account Weather"
         }
       }
@@ -542,7 +542,7 @@
       "name": "memory response",
       "credentials": {
         "openAiApi": {
-          "id": "hdNslrq7ctMZwTrQ",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "OpenAi account"
         }
       }
@@ -616,7 +616,7 @@
     },
     {
       "parameters": {
-        "chatId": "8514002084",
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
         "text": "=⚠️ ALERT JAKOŚCI POWIETRZA  PM2.5: {{$json[\"PM 2.5\"]}} µg/m³ PM10: {{$json[\"PM 10\"]}} µg/m³  Temperatura: {{$json[\"Temperature\"]}} °C Wilgotność: {{$json[\"Humidity\"]}} %  Norma WHO została przekroczona.",
         "additionalFields": {
           "appendAttribution": false
@@ -630,10 +630,10 @@
       ],
       "id": "9075831f-3199-4f8b-9fe8-1d88189c225b",
       "name": "Send Alarm Text",
-      "webhookId": "e8784db2-50eb-4bbe-af81-b954b8099f7f",
+      "webhookId": "REDACTED",
       "credentials": {
         "telegramApi": {
-          "id": "ZDZOZpzRKf4y2ISS",
+          "id": "REDACTED_CREDENTIAL_ID",
           "name": "Telegram account"
         }
       }
@@ -911,7 +911,7 @@
   "versionId": "ec810865-3a2d-41d8-ab3c-9764fced7744",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "f810b2ec5d99d15ea9894019f51f44f1c0125546d6ad8d9d827bcd55b65d8c85"
+    "instanceId": "REDACTED_INSTANCE_ID"
   },
   "id": "XGYeXtmaiiMqHaBk",
   "tags": []
