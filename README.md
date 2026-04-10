@@ -13,7 +13,8 @@ IoT air quality monitoring platform based on ESP32, PMS5003 and BME280, with dat
 - Sensor duty cycle and cleaning cycle
 - WiFi data transmission
 - Google Sheets logging via Google Apps Script
-- Ready for future n8n and Telegram integration
+- n8n workflow integration
+- Telegram-based interaction
 
 ---
 
