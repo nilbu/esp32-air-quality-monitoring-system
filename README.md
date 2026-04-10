@@ -94,4 +94,4 @@ Example sanitized n8n workflow export used for Telegram interaction, voice trans
 
 ## Author
 
-Tomek B
+Tomek B.
