@@ -1,6 +1,6 @@
-# ESP32 Air Quality Monitoring Station
+# ESP32 Air Quality Monitoring Platform
 
-IoT air quality monitoring platform based on ESP32, PMS5003 and BME280, with data logging to Google Sheets.
+IoT air quality monitoring platform based on ESP32, PMS5003 and BME280, with Google Sheets logging, n8n automation, Telegram integration and PostgreSQL/pgvector conversational memory.
 
 ---
 
