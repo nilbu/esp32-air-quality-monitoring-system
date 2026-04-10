@@ -58,6 +58,21 @@ Example sensor records logged to Google Sheets:
 
 ---
 
+## Integrations Preview
+
+Example n8n workflow:
+
+![n8n Workflow](images/n8n_workflow.png)
+
+Example Telegram interaction:
+
+![Telegram Example](images/telegram_example.jpg)
+
+n8n workflow export:
+- [telegram-workflow.json](n8n/telegram-workflow.json)
+
+---
+
 ## Author
 
 Tomek B
