@@ -121,6 +121,19 @@ Breadboard prototype of the air quality monitoring station:
 
 ---
 
+## Planned Platform Extensions
+
+The next development stage of the project focuses on extending the station into a more complete monitoring platform.
+
+Planned extensions include:
+- **n8n workflow automation** for processing, routing and querying sensor data
+- **Telegram bot integration** for text-based interaction with the station
+- **voice query support** for hands-free access to measurements
+- **weather context enrichment** using external APIs such as OpenWeather
+- **historical querying** based on data already stored in Google Sheets
+
+---
+
 ## Documentation
 
 Additional project documentation is available in PDF format:
